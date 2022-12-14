@@ -28,7 +28,7 @@ exports.saveStore = async (req,res) => {
     console.log(querySave)
     let response = await dbQuery(querySave,values)
 
-    return res.status(201).send("Done")
+    return res.status(201).send(response.rows)
     
 
   } catch (error) {
